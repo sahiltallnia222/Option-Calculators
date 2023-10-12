@@ -1,24 +1,13 @@
 {
-    "functions": {
-        "api/test.js": {
-            "memory": 1024,
-            "maxDuration": 30 
-        },
-        "api/*.js": {
-            "memory": 1024,
-            "maxDuration": 15
-        }
-    },
-    "builds": [
-      {
-        "src": "webapp/wsgi.py",
-        "use": "@vercel/python"
-      }
-    ],
+    "builds": [{
+        "src": "vercel_app/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "webapp/wsgi.py"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "vercel_app/wsgi.py"
+        }
     ]
 }
