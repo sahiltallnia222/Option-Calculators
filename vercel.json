@@ -1,4 +1,14 @@
 {
+    "functions": {
+        "api/test.js": {
+            "memory": 1024,
+            "maxDuration": 30 
+        },
+        "api/*.js": {
+            "memory": 1024,
+            "maxDuration": 15
+        }
+    },
     "builds": [
       {
         "src": "webapp/wsgi.py",
