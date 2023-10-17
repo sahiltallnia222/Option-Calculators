@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'option-calculator'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F809B873E6ED4A159429C4320E995C4A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_10DBA3CA53ED40EE8369BB1C24AA6F11 }}
